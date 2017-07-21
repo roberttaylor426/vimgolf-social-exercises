@@ -43,4 +43,4 @@ if [[ -z $AUTHOR ]] || [[ -z $SOLUTION ]] ; then
     exit 1
 fi
 
-curl -X POST -H "Content-Type: application/json" http://35.176.237.81:3000/exercises/from_arg_to_object/authors/$AUTHOR/solutions -d '{"solution": "$SOLUTION"}'
+curl -X POST -H "Content-Type: application/json" http://35.176.237.81:3000/exercises/from_arg_to_object/authors/$AUTHOR/solutions -d '{"solution": '"\"$SOLUTION\""'}'
